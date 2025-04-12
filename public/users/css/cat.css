@@ -1,0 +1,115 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #ff4444;
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+
+    #overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .overlaybtn {
+      font-size: 1.5rem;
+      padding: 10px 20px;
+      background: #111;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .header-banner {
+      position: relative;
+      width: 100%;
+      height: 55vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #bg-video {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .banner-text {
+      position: absolute;
+      z-index: 2;
+      color: #ff4444;
+      font-size: 3rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .content {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 20px 20px;
+    }
+
+    .role-section {
+      margin-bottom: 40px;
+    }
+
+    .role-section h2 {
+      text-align: center;
+      border-bottom: 2px solid #ff4444;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    .member-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      text-align: center;
+    }
+
+    .member-card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(255, 68, 68, 0.2);
+      padding: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .member-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(255, 68, 68, 0.4);
+    }
+
+    .member-card a {
+      text-decoration: none;
+      color: #ff4444;
+      font-weight: bold;
+    }
+
+    .member-card a:hover {
+      text-decoration: underline;
+    }

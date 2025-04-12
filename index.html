@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:3</title>
+    <meta name="theme-color" content="#000001">
+    <link rel="stylesheet" href="public/users/css/cat.css">
+    <link rel="icon" href="public/src/img/wyableh.png" type="image/x-icon">
+    <link rel="shortcut icon" href="public/src/img/wyableh.png" type="image/x-icon">
+
+    <meta content=":3" property="og:title" />
+    <meta content="http://refrain.lol/" property="og:url" />
+    <meta content="https://cdn.discordapp.com/attachments/1104178667552256040/1349875195988545607/1069403825649234022.png?ex=67d4b0be&is=67d35f3e&hm=7b8f8fd24f513575bdfb90ed59098665749052c6b7a94dfbf495a77e0367c74c&" property="og:image" />
+
+    <!-- Overlay -->
+    <div id="overlay">
+        <button class="overlaybtn" onclick="removeOverlay()">click :3</button>
+    </div>
+
+  <div class="header-banner">
+    <video id="bg-video" autoplay loop muted playsinline>
+      <source src="https://files.catbox.moe/1ubfkb.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+    <audio id="backgroundsong" src="./r2.wya.lol/music.mp3" loop></audio>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Founder Section -->
+        <div class="role-section">
+            <h2>Grand Masterbaiter</h2>
+            <div class="member-list">
+                <div class="member-card">
+                    <a href="https://refrain.lol">v^</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Administrators Section -->
+        <div class="role-section">
+            <h2>Swag girlfriend</h2>
+            <div class="member-list">
+                <div class="member-card"><a href="https://crier.lol">rosie</a></div>
+            </div>
+        </div>
+
+        <!-- Members Section -->
+    <div class="role-section">
+        <h2>Gooners</h2>
+        <div class="member-list">
+            <div class="member-card">
+                <a href="https://x.com/Le_Maoshroom">Maoshroom</a>
+            </div>
+            <div class="member-card">
+                <a href="https://guns.lol/zpmbiezz">zqmbie</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function removeOverlay() {
+            const overlay = document.getElementById('overlay');
+            const video = document.getElementById('bg-video');
+            const audio = document.getElementById('backgroundsong');
+
+            overlay.classList.add('hidden');
+
+            // Unmute and replay video
+            video.muted = false;
+            video.currentTime = 0;
+            video.play();
+
+            // Play audio
+            audio.play().catch((e) => {
+                console.log("Audio playback failed:", e);
+            });
+        }
+    </script>
+
+</body>
+</html>
