@@ -6,7 +6,7 @@
     <title>:3</title>
     <meta name="theme-color" content="#000001">
     <link rel="stylesheet" href="public/users/css/cat.css">
-    <link rel="icon" href="public/src/img/bleh.png" type="image/x-icon">
+    <link rel="icon" href="public/src/img/blehbleh.png" type="image/x-icon">
     <link rel="shortcut icon" href="public/src/img/bleh.png" type="image/x-icon">
 
     <meta content=":3" property="og:title" />
@@ -22,14 +22,11 @@
     </div>
 
   <div class="header-banner">
-    <video id="bg-video" autoplay loop muted playsinline>
-      <source src="https://files.catbox.moe/1zt5dw.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
+        <img src="banner.png" alt="Banner Image" />
+    </div>
 
     <audio id="backgroundsong" src="./meow/music.mp3" loop></audio>
-
+	
     <!-- Main Content -->
     <div class="content">
         <!-- Founder Section -->
@@ -37,7 +34,7 @@
             <h2>Grand Masterbaiter</h2>
             <div class="member-list">
                 <div class="member-card">
-                    <a href="https://refrain.lol">yuta</a>
+                    <a href="https://refrain.lol">v^</a>
                 </div>
             </div>
         </div>
@@ -64,24 +61,22 @@
     </div>
 
     <script>
-        function removeOverlay() {
-            const overlay = document.getElementById('overlay');
-            const video = document.getElementById('bg-video');
-            const audio = document.getElementById('backgroundsong');
+    function removeOverlay() {
+        const overlay = document.getElementById('overlay');
+        const audio = document.getElementById('backgroundsong');
 
-            overlay.classList.add('hidden');
+        overlay.classList.add('hidden');
 
-            // Unmute and replay video
-            video.muted = false;
-            video.currentTime = 0;
-            video.play();
-
-            // Play audio
+        // Play background audio
+        if (audio) {
             audio.play().catch((e) => {
                 console.log("Audio playback failed:", e);
             });
         }
-    </script>
+    }
+</script>
+
+      <audio id="backgroundsong" src="./meow/music.mp3" loop></audio>
 
 </body>
 </html>
