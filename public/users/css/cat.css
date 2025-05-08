@@ -60,34 +60,34 @@
     0 0 82px #fff;
 }
 
-    .header-banner {
-      position: relative;
-      width: 100%;
-      height: 60vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures the body fills the entire viewport */
+    background-color: #000;
+}
 
-    #header-banner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
+.header-banner {
+    width: 100%;
+    height: auto; /* Let the image adapt to its aspect ratio */
+    overflow: hidden;
+}
 
-    .banner-text {
-      position: absolute;
-      z-index: 2;
-      color: #ff4444;
-      font-size: 3rem;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px 20px;
-      border-radius: 10px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
+.header-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
     .content {
       background-color: rgba(6, 6, 6, 0.9);
