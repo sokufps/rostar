@@ -12,21 +12,36 @@
     <meta content=":3" property="og:title" />
     <meta content="http://refrain.lol/" property="og:url" />
     <meta content="https://cdn.discordapp.com/attachments/1104178667552256040/1349875195988545607/1069403825649234022.png?ex=67d4b0be&is=67d35f3e&hm=7b8f8fd24f513575bdfb90ed59098665749052c6b7a94dfbf495a77e0367c74c&" property="og:image" />
+
+    <style>
+        .header-banner {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
-<script src="snow.js"></script>
-<script src="effects.js"></script>
-<script src="effects2.js"></script>
+
+<body>
+    <script src="snow.js"></script>
+    <script src="effects.js"></script>
+    <script src="effects2.js"></script>
 
     <div id="overlay">
         <button class="overlaybtn" onclick="removeOverlay()">click :3</button>
     </div>
 
-  <div class="header-banner">
+    <div class="header-banner">
         <img src="banner.png" alt="Banner Image" />
     </div>
 
-    <audio id="backgroundsong" src="./r2.wya.lol/music.mp3" loop></audio>
-	
+    <audio id="backgroundsong" src="./meow/music.mp3" loop></audio>
+
     <!-- Main Content -->
     <div class="content">
         <!-- Founder Section -->
@@ -43,40 +58,39 @@
         <div class="role-section">
             <h2>Swag girlfriend</h2>
             <div class="member-list">
-                <div class="member-card"><a href="https://crier.lol">rosie</a></div>
+                <div class="member-card">
+                    <a href="https://crier.lol">rosie</a>
+                </div>
             </div>
         </div>
 
         <!-- Members Section -->
-    <div class="role-section">
-        <h2>Gooners</h2>
-        <div class="member-list">
-            <div class="member-card">
-                <a href="https://x.com/Le_Maoshroom">Maoshroom</a>
-            </div>
-            <div class="member-card">
-                <a href="https://guns.lol/zpmbiezz">zqmbie</a>
+        <div class="role-section">
+            <h2>Gooners</h2>
+            <div class="member-list">
+                <div class="member-card">
+                    <a href="https://x.com/Le_Maoshroom">Maoshroom</a>
+                </div>
+                <div class="member-card">
+                    <a href="https://guns.lol/zpmbiezz">zqmbie</a>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-    function removeOverlay() {
-        const overlay = document.getElementById('overlay');
-        const audio = document.getElementById('backgroundsong');
+        function removeOverlay() {
+            const overlay = document.getElementById('overlay');
+            const audio = document.getElementById('backgroundsong');
 
-        overlay.classList.add('hidden');
+            overlay.classList.add('hidden');
 
-        // Play background audio
-        if (audio) {
-            audio.play().catch((e) => {
-                console.log("Audio playback failed:", e);
-            });
+            if (audio) {
+                audio.play().catch((e) => {
+                    console.log("Audio playback failed:", e);
+                });
+            }
         }
-    }
-</script>
-
-      <audio id="backgroundsong" src="./r2.wya.lol/music.mp3" loop></audio>
-
+    </script>
 </body>
 </html>
